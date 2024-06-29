@@ -23,3 +23,6 @@ mongoose.connection.on('connected', () => {
 mongoose.connection.on('error',(error:Error)=> console.log(error))
 
 app.use('/students',router())
+app.get("/",(req,res)=>{
+    res.status(200).send({message:"api working"})
+})
